@@ -4,8 +4,8 @@ FROM arm32v7/python:3
 
 
 # update apk repo
-RUN echo "http://dl-4.alpinelinux.org/alpine/v3.12/main" >> /etc/apk/repositories && \
-    echo "http://dl-4.alpinelinux.org/alpine/v3.12/community" >> /etc/apk/repositories
+#RUN echo "http://dl-4.alpinelinux.org/alpine/v3.12/main" >> /etc/apk/repositories && \
+#    echo "http://dl-4.alpinelinux.org/alpine/v3.12/community" >> /etc/apk/repositories
 
 RUN apk add --no-cache tzdata
 RUN apk --no-cache add curl
