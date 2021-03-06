@@ -11,7 +11,7 @@ RUN apk add --no-cache tzdata
 RUN apk --no-cache add curl
 ENV TZ Europe/London
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
 COPY requirements.txt ./
 #RUN pip install --no-cache-dir -r requirements.txt
