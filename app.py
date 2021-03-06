@@ -19,7 +19,7 @@ def home():
     if HN in os.environ:
         hostname = os.environ[HN]
 
-    return f'<h1> {host} is healthy, running version {ver} </h1> '
+    return f'<h1> {hostname} is healthy, running version {ver} </h1> '
 
 if __name__ == '__main__':
     print("webserver starting")
