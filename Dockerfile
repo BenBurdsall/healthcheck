@@ -1,5 +1,5 @@
-#FROM arm32v7/python:3
-FROM python:3.10-rc-alpine3.12git
+FROM arm32v7/python:3
+#FROM python:3.10-rc-alpine3.12
 
 
 
