@@ -1,15 +1,24 @@
-from flask import Flask
+from flask import Flask,Response
 import os
-import socket
+from filelistener import FileListener
 
 VERSION = "APPVERSION"
 HN  = "HN"
 
+fl = FileListener('/app/logfile.log',60)
+fl.monitor()
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def home():
+
+
+    if not fl.isFileBeingModified():
+        print("File is not healthy - causing an HTTP error code ")
+        status_code = Response(status=500)
+        return status_code
 
     ver = '(not set)'
     if VERSION in os.environ:
