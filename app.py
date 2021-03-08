@@ -5,7 +5,7 @@ from filelistener import FileListener
 VERSION = "APPVERSION"
 HN  = "HN"
 
-fl = FileListener('/app/logfile.log',60)
+fl = FileListener('/app/logs/vc3.log',60)
 fl.monitor()
 
 app = Flask(__name__)
