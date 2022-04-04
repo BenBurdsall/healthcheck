@@ -15,10 +15,10 @@ app = Flask(__name__)
 def home():
 
 
-    if not fl.isFileBeingModified():
-        print("File is not healthy - causing an HTTP error code ")
-        status_code = Response(status=500)
-        return status_code
+#    if not fl.isFileBeingModified():
+#        print("File is not healthy - causing an HTTP error code ")
+#        status_code = Response(status=500)
+#        return status_code
 
     ver = '(not set)'
     if VERSION in os.environ:
